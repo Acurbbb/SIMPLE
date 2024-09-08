@@ -1,42 +1,46 @@
-# Project Title
+# SIMPLE
 
-A brief description of what the project does and who it's for.
+This is an implementation of the average positronium lifetime image reconstruction method SIMPLE (Statistical IMage reconstruction of Positron Lifetime via time-wEighting).
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Features](#features)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Contributing](#contributing)
-6. [License](#license)
-7. [Contact](#contact)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contact](#contact)
 
 ## Overview
 
-This section should give a high-level summary of the project. Briefly describe the purpose of the project, what problem it solves, and who the target audience is.
-
-### Example:
-
-This project is a Python-based tool that automates data processing for large datasets. It is designed to help data scientists and engineers streamline their workflows, making it easier to preprocess, clean, and transform data.
-
-## Features
-
-- Fast data processing with multi-threading support
-- Configurable pipelines for data cleaning
-- Supports multiple input/output formats (CSV, JSON, Parquet)
-- Extensible with custom plugins
-- Detailed logging and error handling
+This project performs triples pairing and lifetime image reconstruction, whose code locate in ./processing and ./recon respectively.  
 
 ## Installation
 
-Follow the steps below to install the project.
+No installation is required. However, re-make of the mex functions may be necessary depending on your environment. To do this, run the scripts with name 'make*.m' (beginning with make) under folder ./recon/funcs and ./processing/mex and funcstions for list-mode projection and data processing shall be ready.
 
-```bash
-# Clone the repository
-git clone https://github.com/username/project-name.git
+## Usage
 
-# Navigate into the project directory
-cd project-name
+The data processing and image reconstruction are two standalone parts. The later reconstruction part can be executed without running the first part of processing as the list-mode data is supplied.
 
-# Install dependencies
-pip install -r requirements.txt
+### Source data
+
+https://ucdavis.box.com/s/hnrpxki5rb4wo1kp85dqu70a642u1r3f
+
+### Data processing
+
+
+
+### SIMPLE reconstruction
+
+In ./recon, run_moby.m and run_prismpet.m perform the image reconstruction 
+
+- Download the ./simulation and ./prism-pet folders in the above link to your drive
+- Change the 'data_folder' variable to your data paths in run_moby.m and run_prismpet.m respectively
+- Hit run
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Acurbbb/SIMPLE/blob/main/LICENSE) file for details.
+
+## Contact
+
+For any questions or suggestions, feel free to contact Bangyan Huang at bybhuang@ucdavis.edu or Jinyi Qi at qi@ucdavis.edu
